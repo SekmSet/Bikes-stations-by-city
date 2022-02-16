@@ -11,8 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mali:wght@200&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../Public/css/style.css">
-    <link rel="stylesheet" href="../Public/css/slider.css">
+    <link rel="stylesheet" href="Public/css/style.css">
+    <link rel="stylesheet" href="Public/css/slider.css">
     <title>Vélo Station Finder</title>
 </head>
 <body>
@@ -39,8 +39,10 @@
                 <select name="selectVille" id="ville">
                     <option value="Brisbane">Brisbane (UK)</option>
                     <option value="Bruxelles">Bruxelles (BE)</option>
-                    <option value="Namur"> (BE)</option>
+                    <option value="Namur"> Namue (BE)</option>
                     <option value="Santander">Santander (ES)</option>
+                    <option value="Seville">Seville (ES)</option>
+                    <option value="Valence">Valence (ES)</option>
                     <option value="Amiens">Amiens (FR)</option>
                     <option value="Cergy-Pontoise">Cergy-Pontoise(FR)</option>
                     <option value="Creteil">Creteil (FR)</option>
@@ -50,15 +52,13 @@
                     <option value="Nancy">Nancy (FR)</option>
                     <option value="Nantes">Nantes (FR)</option>
                     <option value="Toulouse">Toulouse (FR)</option>
+                    <option value="Besancon">Besancon (FR)</option>
                     <option value="Dublin">Dublin (IE)</option>
                     <option value="Toyama">Toyama (JP)</option>
                     <option value="Vilnius">Vilnius (LT)</option>
                     <option value="Luxembourg">Luxembourg (LU)</option>
                     <option value="Lillestrom">Lillestrom (NO)</option>
-                    <option value="Besancon">Besancon ()</option>
                     <option value="Jcdecauxbike">Jcdecauxbike ()</option>
-                    <option value="Seville">Seville ()</option>
-                    <option value="Valence">Valence ()</option>
                     <option value="Lund">Lund (SE)</option>
                     <option value="Stockholm">Stockholm (SE)</option>
                     <option value="Ljubljana">Ljubljana (SI)</option>
@@ -70,7 +70,7 @@
                 <button id="buttonValider">v a l i d e r</button>
             </div>
         </div>
-        <img src="../Public/img/velo.png" alt="Byciclette noire">
+        <img src="Public/img/velo.png" alt="Byciclette noire">
 
         <div class="slider" id="slider">
             <div>
@@ -78,11 +78,11 @@
                     <h1>Instructions</h1>
                 </div>
                 <div class="img">
-                    <img id="img_slider" class="img_slider" src="../Public/img/1-home.png" alt="Photo slider instruction du site">
+                    <img id="img_slider" class="img_slider" src="Public/img/1-home.png" alt="Photo slider instruction du site">
                     <div class="footer">
-                        <img id="arrowLeft" class="svg" src="../Public/img/left.svg" alt="Flêche gauche noire">
+                        <img id="arrowLeft" class="svg" src="Public/img/left.svg" alt="Flêche gauche noire">
                         <span id="etape">Je renseigne mon prénom, mon nom et la ville</span>
-                        <img id="arrowRight" class="svg" src="../Public/img/right.svg" alt="Flêche droite noire">
+                        <img id="arrowRight" class="svg" src="Public/img/right.svg" alt="Flêche droite noire">
                     </div>
                 </div>
                 <button class="button_card" id="valideSlider">o k</button>
@@ -99,7 +99,7 @@
             <div id="map"></div>
             <div id="card">
                 <div class="head">
-                    <img src="../Public/img/velo.png" alt="Byciclette noire">
+                    <img src="Public/img/velo.png" alt="Byciclette noire">
                     <div>
                         <button id="closeCard">X</button>
                     </div>
@@ -154,8 +154,13 @@
 </div>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4DbOmopxp7_u2IwDGLW-u5dyLnLG4uOI&libraries=&v=weekly" async></script>
-<script type="text/javascript" src="../../map_velo/Script/canvas.js"></script>
-<script type="text/javascript" src="../../map_velo/Script/home.js"></script>
-<script type="text/javascript" src="../../map_velo/Script/slider.js"></script>
+
+<script type="text/javascript" src="./Script/storage.js"></script>
+<script type="text/javascript" src="./Script/map.js"></script>
+<script type="text/javascript" src="./Script/page/page1.js"></script>
+<script type="text/javascript" src="./Script/page/page2.js"></script>
+<script type="text/javascript" src="./Script/slider.js"></script>
+<script type="text/javascript" src="./Script/canvas.js"></script>
+<script type="text/javascript" src="./Script/index.js"></script>
 </body>
 </html>
