@@ -3,6 +3,8 @@ class Page2 {
         this.storage = storage;
         this.canvas = canvas;
         this.map = map
+
+        this.handleClick()
     }
 
     quitter (content_1_id, content_2_id) {
@@ -47,5 +49,26 @@ class Page2 {
         this.canvas.initCanvas()
 
         this.map.zoom(this.map.markers[marker], 13)
+    }
+
+    handleClick() {
+        const buttonQuitter = document.getElementById('buttonQuitter')
+        const closeCard = document.getElementById('closeCard')
+        const reserverVelo = document.getElementById('reserver')
+
+        buttonQuitter.addEventListener('click', () => {
+            this.quitter('content_1', 'content_2')
+        })
+
+        closeCard.addEventListener('click',  () => {
+            this.closeCard('card')
+        })
+
+        reserverVelo.addEventListener('click',  () => {
+            const jourResa = document.getElementById('jourResa')
+            const heureResa = document.getElementById('heureResa')
+
+            this.reserverVelo(jourResa, heureResa, 'card')
+        })
     }
 }

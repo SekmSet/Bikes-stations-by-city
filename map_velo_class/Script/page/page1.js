@@ -2,6 +2,8 @@ class Page1 {
     constructor(map, storage) {
         this.map = map;
         this.storage = storage;
+
+        this.handleClick()
     }
 
     async validateForm (elemNom, elemPrenom, elemVille, errorId, elementId, content_1_id, content_2_id) {
@@ -40,6 +42,18 @@ class Page1 {
 
         Page1.changeDisplay(content_1, "none")
         Page1.changeDisplay(content_2, "block")
+    }
+
+    handleClick() {
+        const buttonValider = document.getElementById('buttonValider')
+        buttonValider.addEventListener('click', async () => {
+            const nom = document.getElementById('nom')
+            const prenom = document.getElementById('prenom')
+            const ville = document.getElementById('ville')
+
+            this.storage.initStorages(nom.value, prenom.value, ville.value);
+            await this.validateForm(nom, prenom, ville, 'error', 'fullName',"content_1", "content_2");
+        })
     }
 
     static clearInput(input) {

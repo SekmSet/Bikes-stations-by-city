@@ -13,6 +13,7 @@ class Slider {
         this.img_slider = document.getElementById(img_slider)
         this.etape = document.getElementById(etape)
         this.autoSlider()
+        this.handleClick()
     }
 
     slide (sens) {
@@ -54,5 +55,23 @@ class Slider {
         setInterval(() => {
            this.slide(+1)
         }, 5000)
+    }
+
+    handleClick() {
+        const arrowLeft = document.getElementById("arrowLeft")
+        const arrowRight = document.getElementById("arrowRight")
+        const valideSlider = document.getElementById("valideSlider")
+
+        arrowLeft.addEventListener('click', () => {
+            slide.leftSlider()
+        })
+
+        arrowRight.addEventListener('click', () => {
+            slide.rightSlider()
+        })
+
+        valideSlider.addEventListener('click', () => {
+            Page1.changeDisplay(slider, "none")
+        })
     }
 }

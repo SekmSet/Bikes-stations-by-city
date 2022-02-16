@@ -6,6 +6,8 @@ class Canvas {
         this.ctx = this.canv.getContext("2d");
 
         this.painting = false;
+
+        this.handleClick()
     }
 
     initCanvas (){
@@ -52,5 +54,12 @@ class Canvas {
     valideSignature (signature) {
         this.storage.update('signature', this.canv.toDataURL());
         signature.style.display="none";
+    }
+
+    handleClick () {
+        const valideSignature = document.getElementById('valideSignature')
+        valideSignature.addEventListener('click', () => {
+            canvas.valideSignature(signature)
+        })
     }
 }
