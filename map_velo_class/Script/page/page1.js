@@ -14,7 +14,7 @@ class Page1 {
         const ville = elemVille.value;
 
         if(nom === "" || prenom === "" || ville === "") {
-            Page1.setTextContent(error,  "La recherche n'a pas pu aboutir. Merci de réessayer.")
+            Utils.setTextContent(error,  "La recherche n'a pas pu aboutir. Merci de réessayer.")
             return
         }
 
@@ -25,7 +25,7 @@ class Page1 {
         const isOk = await this.map.getSationsByContracts()
 
         if(!isOk) {
-            Page1.setTextContent(error,  "La recherche n'a pas pu aboutir. Merci de réessayer.")
+            Utils.setTextContent(error,  "La recherche n'a pas pu aboutir. Merci de réessayer.")
             return
         }
 
@@ -33,15 +33,15 @@ class Page1 {
         const content_1 = document.getElementById(content_1_id)
         const content_2 = document.getElementById(content_2_id)
 
-        Page1.setTextContent(element,  `Bonjour ${nom} ${prenom} ! Tu recherches une station vélo à ${ville}`)
+        Utils.setTextContent(element,  `Bonjour ${nom} ${prenom} ! Tu recherches une station vélo à ${ville}`)
 
-        Page1.clearInput(elemNom);
-        Page1.clearInput(elemPrenom);
-        Page1.clearInput(elemVille);
-        Page1.clearInput(error);
+        Utils.clearInput(elemNom);
+        Utils.clearInput(elemPrenom);
+        Utils.clearInput(elemVille);
+        Utils.clearInput(error);
 
-        Page1.changeDisplay(content_1, "none")
-        Page1.changeDisplay(content_2, "block")
+        Utils.changeDisplay(content_1, "none")
+        Utils.changeDisplay(content_2, "block")
     }
 
     handleClick() {
@@ -54,22 +54,5 @@ class Page1 {
             this.storage.initStorages(nom.value, prenom.value, ville.value);
             await this.validateForm(nom, prenom, ville, 'error', 'fullName',"content_1", "content_2");
         })
-    }
-
-    static clearInput(input) {
-        input.value = ""
-    }
-
-    static setTextContent (element, text) {
-        element.textContent = text
-    }
-
-    static setInnerHtml (element, text) {
-        console.log(text, element)
-        element.innerHTML = text
-    }
-
-    static changeDisplay(element, display) {
-        element.style.display = display;
     }
 }

@@ -56,7 +56,7 @@ class Map {
             this.zoom(marker, 19)
             this.addAnimation(marker)
 
-            Page1.changeDisplay(cardElem, "block")
+            Utils.changeDisplay(cardElem, "block")
             this.storage.update('selectStation', marker.data.numero)
 
             const stationName = document.getElementById('stationName')
@@ -67,16 +67,16 @@ class Map {
             const stationElectricalBikes = document.getElementById('stationElectricalBikes')
             const stationMechanicalBikes = document.getElementById('stationMechanicalBikes')
 
-            Page1.setTextContent(stationName, `${marker.data.name}`)
-            Page1.setTextContent(stationAdress, `${marker.data.address}`)
-            Page1.setTextContent(stationStatus, `${marker.data.status}`)
-            Page1.setInnerHtml(stationBikes, `<span class="strong">Nombre de vélo : </span>${marker.data.bikes}`)
-            Page1.setInnerHtml(stationStands, `<span class="strong">Nombre de stands : </span> ${marker.data.stands}`)
-            Page1.setInnerHtml(stationElectricalBikes, `<span class="strong">Nombre de vélo éléctrique : </span>${marker.data.electricalBikes}`)
-            Page1.setInnerHtml(stationMechanicalBikes, `<span class="strong">Nombre de vélo classique : </span> ${marker.data.mechanicalBikes}`)
-            Page1.setInnerHtml(document.querySelector(".stationNum"), `${marker.data.numero}`)
+            Utils.setTextContent(stationName, `${marker.data.name}`)
+            Utils.setTextContent(stationAdress, `${marker.data.address}`)
+            Utils.setTextContent(stationStatus, `${marker.data.status}`)
+            Utils.setInnerHtml(stationBikes, `<span class="strong">Nombre de vélo : </span>${marker.data.bikes}`)
+            Utils.setInnerHtml(stationStands, `<span class="strong">Nombre de stands : </span> ${marker.data.stands}`)
+            Utils.setInnerHtml(stationElectricalBikes, `<span class="strong">Nombre de vélo éléctrique : </span>${marker.data.electricalBikes}`)
+            Utils.setInnerHtml(stationMechanicalBikes, `<span class="strong">Nombre de vélo classique : </span> ${marker.data.mechanicalBikes}`)
+            Utils.setInnerHtml(document.querySelector(".stationNum"), `${marker.data.numero}`)
 
-            console.log(marker.data.mechanicalBikes)
+            console.log(marker.data.mechanicalBikes, marker.data.electricalBikes)
             this.storage.update('markerNumero', id)
         });
 

@@ -13,8 +13,8 @@ class Page2 {
         const content_1 = document.getElementById(content_1_id)
         const content_2 = document.getElementById(content_2_id)
 
-        Page1.changeDisplay(content_1, "flex");
-        Page1.changeDisplay(content_2, "none");
+        Utils.changeDisplay(content_1, "flex");
+        Utils.changeDisplay(content_2, "none");
     }
 
     closeCard (card_id) {
@@ -23,7 +23,7 @@ class Page2 {
 
         this.map.clearAnimationMarkers()
         this.map.zoom(this.map.markers[marker], 13)
-        Page1.changeDisplay(card, "none");
+        Utils.changeDisplay(card, "none");
     }
 
     reserverVelo (jourResa, heureResa, card_id ) {
@@ -44,7 +44,7 @@ class Page2 {
             velo: veloType
         }))
 
-        Page1.changeDisplay(card,"none")
+        Utils.changeDisplay(card,"none")
 
         this.canvas.initCanvas()
 

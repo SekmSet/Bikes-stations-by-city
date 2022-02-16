@@ -71,7 +71,7 @@ class Slider {
         })
 
         valideSlider.addEventListener('click', () => {
-            Page1.changeDisplay(slider, "none")
+            Utils.changeDisplay(slider, "none")
         })
     }
 }
