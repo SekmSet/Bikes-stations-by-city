@@ -1,0 +1,295 @@
+body {
+    margin: 0
+}
+
+h1 {
+    color: #c5242b;
+    word-spacing: 34px;
+    font-family: 'Lobster', cursive;
+}
+
+label {
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    width:50%;
+    font-family: 'Mali', cursive;
+}
+
+input, select {
+    border: none;
+    height: 2em;
+    width:50%;
+    border-radius: 5px;
+    color: #c5242b;
+    caret-color: #c5242b;
+    text-align: center;
+    font-family: 'Mali', cursive;
+}
+
+img:not(.img_slider):not(.svg) {
+    position: absolute;
+    left: 12px;
+    top: 0;
+    width: 23em;
+}
+
+button {
+    height: 3em;
+    background-color: #fff;
+    border-radius: 100px;
+    border: none;
+    color: #c5242b;
+    font-weight: bold;
+    font-family: 'Lobster', cursive;
+    font-size: 18px;
+    transition: 0.35s ease-in;
+}
+
+button:not(#closeCard):not(.button_card):hover {
+    cursor: pointer;
+    background-color: #c5242b80;
+    color: #fff;
+    border: solid 1px #fff;
+}
+
+.button_card:hover {
+    background-color: #c5242b;
+    cursor: pointer;
+    color: #fff;
+    border: solid 1px #fff;
+}
+
+hr {
+    border: 1px solid #c5242b;
+    width: 50%;
+}
+
+.strong {
+    font-weight: bold;
+}
+
+#content_1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100vh;
+    background-color: #fff
+}
+
+#content_1 > .form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 17em;
+    width: 35em;
+    background: #c5242b;
+    padding: 5em;
+    border-radius: 5px;
+    margin: 1em;
+}
+
+.formLigne {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 1em;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.formValidation {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#error {
+    color: white;
+    font-weight: bold;
+    font-style: italic;
+    margin: 1em;
+}
+
+#buttonValider {
+    width: 100%;
+}
+
+#content_2 {
+    display: none;
+    width: 100%;
+}
+
+.header {
+    height: 6em;
+    background-color: #c5242b;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+}
+
+.header > #fullName {
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: 'Lobster', cursive;
+}
+
+.header > button {
+    width: 10em;
+}
+
+.header >button:hover {
+    cursor: pointer;
+}
+
+#map {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+}
+
+#card {
+    display: none;
+    width: 22em;
+    height: auto;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 9998;
+    background: #ffffffE6;
+    margin: 1em;
+    border: solid 1px #c5242b;
+}
+
+#card > .head  > img {
+    width: 5em;
+    position: relative;
+    left: -183px;
+}
+
+#closeCard {
+    background: #ffffffE6;
+    border: none;
+    color: #c5242b;
+}
+
+#closeCard:hover {
+    cursor: pointer;
+}
+
+.head {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 1em;
+}
+
+.body {
+    width: 100%;
+}
+
+.data {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card_info {
+    color: #c5242b;
+    margin: 0.5em;
+}
+
+.principal {
+    font-family: 'Lobster', cursive;
+    text-transform: lowercase;
+    font-size: 1em;
+}
+
+.secondaire {
+    font-family: 'Mali', cursive;
+}
+
+#stationAdress {
+    text-align: center;
+}
+
+#formResa {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+}
+
+.radio, .radio > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5em;
+    width: 100%
+}
+
+.radio > div {
+    width: 50%
+}
+
+.radio > div > label {
+    color: #c5242b;
+    font-size: 1em;
+}
+
+#formResa > label {
+    color: #c5242b;
+    font-size: 14px;
+    margin: 1em;
+    font-weight: bold;
+    width: 70%;
+}
+
+.button_card {
+    margin: 1em;
+    background: #ffffffE6;
+    border: solid 1px #c5242b;
+    width: 91%;
+}
+
+.stationNum {
+    display: none;
+}
+
+#signature {
+    display: none;
+    width: 50em;
+    height: 22em;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 9999;
+    background: #ffffffE6;
+    margin: 1em;
+    border: solid 1px #c5242b;
+    left: 25%;
+    top: 19%;
+}
+
+.canvas {
+    /*width: 88%;*/
+    height: 10em;
+    border: solid 1px #c5242b;
+    border-radius: 5px;
+}
+
+.signature > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

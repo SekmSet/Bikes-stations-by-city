@@ -1,0 +1,49 @@
+#slider {
+    display: block;
+    width: 50em;
+    height: 38em;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 9999;
+    background: #ffffffFA;
+    margin: 1em;
+    border: solid 1px #c5242b;
+    left: 25%;
+    top: 19%;
+}
+
+#slider > div, .img, .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    flex-direction: row;
+}
+
+.img {
+    width: 88%;
+    height: 26em;
+}
+
+.svg {
+    width: 2em;
+}
+
+.svg:hover {
+    cursor: pointer;
+}
+
+.img_slider {
+    width: 38em;
+}
+
+#etape {
+    margin: 1em;
+    font-family: 'Mali', cursive;
+    color: #c5242b;
+    font-weight: bold;
+    font-size: 1.5em;
+}

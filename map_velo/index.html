@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mali:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Public/css/style.css">
+    <link rel="stylesheet" href="Public/css/slider.css">
+    <title>Vélo Station Finder</title>
+</head>
+<body>
+<div id="container" class="container">
+    <div id="content_1">
+        <div>
+            <h1>
+                Retrouve les stations vélos dans ta ville !
+            </h1>
+        </div>
+        <div class="form">
+            <div class="formLigne">
+                <label>Votre nom</label>
+                <input id="nom" type="text">
+            </div>
+
+            <div class="formLigne">
+                <label>Votre Prénom</label>
+                <input id="prenom" type="text">
+            </div>
+
+            <div class="formLigne">
+                <label>Votre ville : </label>
+                <select name="selectVille" id="ville">
+                    <option value="Brisbane">Brisbane (UK)</option>
+                    <option value="Bruxelles">Bruxelles (BE)</option>
+                    <option value="Namur"> (BE)</option>
+                    <option value="Santander">Santander (ES)</option>
+                    <option value="Amiens">Amiens (FR)</option>
+                    <option value="Cergy-Pontoise">Cergy-Pontoise(FR)</option>
+                    <option value="Creteil">Creteil (FR)</option>
+                    <option value="Lyon">Lyon (FR)</option>
+                    <option value="Marseille">Marseille (FR)</option>
+                    <option value="Mulhouse">Mulhouse (FR)</option>
+                    <option value="Nancy">Nancy (FR)</option>
+                    <option value="Nantes">Nantes (FR)</option>
+                    <option value="Toulouse">Toulouse (FR)</option>
+                    <option value="Dublin">Dublin (IE)</option>
+                    <option value="Toyama">Toyama (JP)</option>
+                    <option value="Vilnius">Vilnius (LT)</option>
+                    <option value="Luxembourg">Luxembourg (LU)</option>
+                    <option value="Lillestrom">Lillestrom (NO)</option>
+                    <option value="Besancon">Besancon ()</option>
+                    <option value="Jcdecauxbike">Jcdecauxbike ()</option>
+                    <option value="Seville">Seville ()</option>
+                    <option value="Valence">Valence ()</option>
+                    <option value="Lund">Lund (SE)</option>
+                    <option value="Stockholm">Stockholm (SE)</option>
+                    <option value="Ljubljana">Ljubljana (SI)</option>
+                </select>
+            </div>
+
+            <div class="formValidation">
+                <span id="error"></span>
+                <button id="buttonValider">v a l i d e r</button>
+            </div>
+        </div>
+        <img src="Public/img/velo.png" alt="Byciclette noire">
+
+        <div class="slider" id="slider">
+            <div>
+                <div>
+                    <h1>Instructions</h1>
+                </div>
+                <div class="img">
+                    <img id="img_slider" class="img_slider" src="Public/img/1-home.png" alt="Photo slider instruction du site">
+                    <div class="footer">
+                        <img id="arrowLeft" class="svg" src="Public/img/left.svg" alt="Flêche gauche noire">
+                        <span id="etape">Je renseigne mon prénom, mon nom et la ville</span>
+                        <img id="arrowRight" class="svg" src="Public/img/right.svg" alt="Flêche droite noire">
+                    </div>
+                </div>
+                <button class="button_card" id="valideSlider">o k</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="content_2">
+        <div class="header">
+            <button id="buttonQuitter">r e t o u r</button>
+            <span id="fullName"></span>
+        </div>
+        <div id="afficher">
+            <div id="map"></div>
+            <div id="card">
+                <div class="head">
+                    <img src="Public/img/velo.png" alt="Byciclette noire">
+                    <div>
+                        <button id="closeCard">X</button>
+                    </div>
+                </div>
+                <hr>
+                <div class="body">
+                    <div class="data">
+                        <div class="card_info principal" id="stationName"></div>
+                        <div class="card_info secondaire" id="stationAdress"></div>
+                        <div class="card_info secondaire" id="stationStatus"></div>
+                        <div class="card_info secondaire" id="stationBikes"></div>
+                        <div class="card_info secondaire" id="stationStands"></div>
+                        <div class="card_info secondaire" id="stationElectricalBikes"></div>
+                        <div class="card_info secondaire" id="stationMechanicalBikes"></div>
+                    </div>
+                    <hr>
+                    <div id="formResa">
+                        <input id=stationNum" class="stationNum" type="text">
+
+                        <label>Quel jour souhaité vous réserver un vélo ?</label>
+                        <input id="jourResa" type="date">
+
+                        <label>A quelle heure souhaitez-vous réserver un vélo ?</label>
+                        <input id="heureResa" type="time">
+
+                        <label>Je réserve un vélo classique ou éléctrique ?</label>
+                        <div class="radio">
+                            <div>
+                                <input type="radio" id="classique" name="velo" value="classique" checked>
+                                <label for="classique">Classique</label>
+                            </div>
+                             <div>
+                                 <input type="radio" id="electrique" name="velo" value="electrique">
+                                 <label for="electrique">Électrique</label>
+                             </div>
+                        </div>
+                    </div>
+                    <button class="button_card" id="reserver">r é s e r v e r</button>
+                </div>
+            </div>
+        </div>
+        <div class="signature" id="signature">
+            <div>
+                <div>
+                    <h1>Signer pour valider</h1>
+                </div>
+                <canvas class="canvas" id="canvas"></canvas>
+                <button class="button_card" id="valideSignature">c o n f i r m e r</button>
+            </div>
+       </div>
+    </div>
+</div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4DbOmopxp7_u2IwDGLW-u5dyLnLG4uOI&libraries=&v=weekly" async></script>
+<script type="text/javascript" src="Script/canvas.js"></script>
+<script type="text/javascript" src="Script/home.js"></script>
+<script type="text/javascript" src="Script/slider.js"></script>
+</body>
+</html>
